@@ -8,18 +8,21 @@
     -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../css/form.css" rel="stylesheet" />
     <link href="../css/reset.css" rel="stylesheet" />
-    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/reservationstyle.css" rel="stylesheet" />
     <title>Reservation | Sal Alfredo's Pizzeria</title>
 </head>
 
 <body>
-    <header>
-        <nav> <a id="navicon" href="#"></a></nav>
-        <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Menu</a></li>
-        </ul>
+    <header class="header">
+        <img src="../imgs/logo.jpg" alt="Cal Alfredo Pizzeria" id="logoimg" />
+        <a href="#" class="logo"></a>
+        <nav class="navbar">
+                <a href="#">About Us</a>
+                <a href="#">Menu</a>
+            </ol>
+        </nav>
     </header>
 
     <section>
@@ -29,23 +32,6 @@
             <div class="formRow">
                 <label for="name">Name*</label>
                 <input name="custName" id="name" type="text" placeholder="first and last name" required/>
-            </div>
-            <div class="formRow">
-                <label for="street">Street address</label>
-                <input name="custStreet" id="street" type="text" />
-            </div>
-            <div class="formRow">
-                <label for="city">City</label>
-                <input name="custCity" id="city" type="text" value="Ormond Beach" />
-            </div>
-            <div class="formRow">
-                <label for="state">State</label>
-                <input name="custState" id="state" type="text" value="FL" />
-            </div>
-            <div class="formRow">
-                <label for="zip">Postal Code</label>
-                <input name="custZip" id="zip" type="text" placeholder="nnnnn (-nnnn)" 
-                pattern="^\d{5}(-\d{4})?$"/>
             </div>
             <div class="formRow">
                 <label for="phone">Phone Number</label>
@@ -91,7 +77,7 @@
         </fieldset>
     
         <fieldset id="expInfo">
-            <legend>Share your experience at Red Ball Pizza</legend>
+            <legend>Schedule Your Reservation</legend>
             <div class="formRow">
                 <label for="visit">Date of visit</label>
                 <input name="visitDate" id="visit" type="date" />

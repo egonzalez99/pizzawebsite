@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* color themes: white yellow black */
+
+/* HTML and Body styles */
+
+html {
+    background: rgb(255, 255, 255);
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+ } 
+/* Body styles */
+body {
+    position: relative;
+    display: flex;
+    grid-template-rows: 1fr auto;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    background: url('../imgs/reservationBG.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    background-color: white;
+    box-shadow: rgb(255, 215, 8) 20px 0px 40px,  rgb(255, 215, 8) -20px 0px 40px,
+                inset rgb(255, 0, 0) 5px 10px 10px,  inset rgb(255, 0, 0) -5px 10px 10px;
+    border-left: 5px solid rgb(0, 140, 255);
+    border-right: 5px solid rgb(0, 140, 255);
+    min-height: 100%;  
+    margin: 5px auto;
+    min-width: 320px;
+    max-width: 1300px;
+    max-height: 100%;  
+    width: 100%;
+}
+
+/* Header & Logo styles */
+
+header img#logoimg {
+    max-width: 3%;
+    max-height: 3%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border-radius: 100%;
+ }
+ 
+ header {
+    background: linear-gradient(to top, black 70%, rgb(179, 20, 25));
+    border-bottom: 1px rgb(0, 0, 0);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+ }
+
+ .logo {
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: 700;
+ }
+
+/* Navigation list styles */
+
+header nav ul li {
+    font-size: 1.2em; 
+    line-height: 2.3em; 
+    height: 2.3em;
+    padding: 0px 10px;
+ }
+ 
+ header nav ul li a {
+    color: white;
+    display: block;
+    width: 100%;
+ }
+ 
+ .navbar a {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+ }
+ 
+ .navbar a {
+    position: relative;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+ }
+
+ .navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 1;
+    height: 2px;
+    background: white;
+ }
+
+ .navbar a:hover::before {
+    width: 100%;
+ }
+
+ section {
+    height: 100%;
+    margin: 30px 3%;
+    margin-top: 50px;
+    padding: 0px;
+ }
+ 
+ section h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5em;
+    color: rgb(179, 20, 25);
+    margin-bottom: auto;
+ }
+ 
+ section p {
+    line-height: 1.4em;
+    margin: 15px 0px;
+    margin-bottom: auto;
+ }
+ 
+
+/* Footer styles */   
+
+footer {
+    color: white;    
+    background: linear-gradient(to top, rgb(255, 215, 8), black);   
+    -moz-column-width: 200px;
+    -webkit-column-width: 200px;
+     column-width: 200px;
+ 
+    -moz-column-gap: 25px;
+    -webkit-column-gap: 25px;
+     column-gap: 25px;
+     
+     padding: 20px 40px;
+     position: fixed; /* Ensure footer remains fixed */
+     bottom: 0; /* Position footer at the bottom */
+     width: 69.5%;
+     display: flexbox;
+     grid-template-rows: 1fr auto;   
+ }
+ 
+ footer h1 {
+    color: rgb(255, 241, 147);   
+    font-size: 1em;
+    margin: 10px 0px;
+    margin-bottom: auto;
+ }
+ 
+ footer h1:first-of-type {
+    margin-top: 0px;
+    margin-bottom: auto;
+ }
+ 
+ footer a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-bottom: auto;
+ }
+ 
+ footer a:hover {
+    text-decoration: underline;
+ }
+ 
+ footer address {
+    margin-top: 30px;
+    font-style: normal;
+    margin-bottom: auto;
+ }
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media only screen and (max-width: 640px) {
+
+   
+    a#navicon {
+       display: block;
+    }
+    
+    header nav ul {
+       display: none;
+    }
+    
+    header nav ul li {
+       font-size: 1em;
+       line-height: 1.3em;
+       height: 1.3em;
+    }
+    
+    a#navicon:hover+ul, header nav ul:hover {
+       display: block;
+    }
+    
+    section h1 {
+       font-size: 1.5em;
+    }
+    
+    section p {
+       font-size: 0.9em;
+    }
+ }
+ 
+
+ /* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media only screen and (min-width: 641px) {
+
+    body header nav ul {
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-flow: row nowrap;
+       flex-flow: row nowrap;
+       -webkit-justify-content: center;
+       justify-content: center;
+    }
+    
+    body header nav ul li {
+       -webkit-flex: 0 1 auto;
+       flex: 0 1 auto;
+    }
+ }
