@@ -10,33 +10,39 @@
 div.formRow {
     display: flex;
     flex-flow: row wrap;
-    margin: 7px 0px;
+    margin: 7px 7px;
+    margin-top: 10px;
 }
 
 div.formRow > * {
-    flex: 1 1 150px;
+    flex: 1 1 250px;
 }
 
 form#survey {
     display: flex;
     flex-flow: row wrap;
+    width: 85%; /* Adjust the width of the form */
+    max-width: 500px; /* Set a maximum width to ensure it doesn't become too wide */
+    margin: auto;
 }
 
 form#survey > fieldset {
-    background-color: rgb(241,232,181);
+    background-color: rgb(255, 215, 8);
     border-radius: 20px;
     flex: 1 1 300px;
     font-size: 0.85em;
     padding: 10px;
     margin: 10px;
+    margin-top: 10px;
 }
 /* Legend Styles */
 legend {
     background-color: rgb(179,20,25);
     color: white;
     padding: 5px;
+    border-radius: 20px;
+    margin-top: 10px;
 }
-
 
 /* Text Area Styles */
 textarea {
@@ -59,24 +65,24 @@ div#buttons {
 input[type='submit'], input[type='reset'] {
     font-size: 1.2em;
     padding: 5px;
-    margin: 15px;
+
+    text-align: center;
+    border-radius: 5%;
 }
 
 /* Validation Styles */
 input:focus, select:focus, textarea:focus {
-    background-color: rgb(220, 255, 220);
+    background-color: rgb(226, 236, 226);
 
 }
 
 input#name:focus:valid,
-input#zip:focus:valid,
 input#phone:focus:valid,
 input#mail:focus:valid {
     background: rgb(220, 255, 220) url(../imgs/rb_valid.png) bottom right/contain no-repeat;
 }
 
 input#name:focus:valid,
-input#zip:focus:valid,
 input#phone:focus:valid,
 input#mail:focus:valid {
     background: rgb(255, 232, 233) url(../imgs/rb_valid.png) bottom right/contain no-repeat;
